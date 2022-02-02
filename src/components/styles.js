@@ -11,10 +11,6 @@ const useStyles = makeStyles({
         // border: "1px solid blue",
         margin:  '90px auto',
         width:  '40%',
-        // backgroundColor: ''
-
-
-
     },
 
     container: {
@@ -23,7 +19,7 @@ const useStyles = makeStyles({
         flexDirection: "column",
         alignItems: "center",
         rowGap: "10px",
-        margin: "15px auto"
+        margin: "15px auto",
     },
 
     title: {
@@ -63,6 +59,7 @@ const useStyles = makeStyles({
         // alignItems: "center",
         margin: "10px auto",
         width: "80%",
+        // backgroundColor: "#b0c4de"
         // height: "60%"
     },
 
