@@ -8,13 +8,9 @@ const useStyles = makeStyles({
     componentPaper: {
 
         borderRadius: "2rem",
-        // border: "1px solid blue",
+        border: "1px solid blue",
         margin:  '90px auto',
         width:  '40%',
-        // backgroundColor: ''
-
-
-
     },
 
     container: {
