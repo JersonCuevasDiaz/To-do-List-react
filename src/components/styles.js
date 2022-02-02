@@ -8,7 +8,7 @@ const useStyles = makeStyles({
     componentPaper: {
 
         borderRadius: "2rem",
-        border: "1px solid blue",
+        border: "1px solid black",
         margin:  '90px auto',
         width:  '40%',
     },
@@ -19,7 +19,8 @@ const useStyles = makeStyles({
         flexDirection: "column",
         alignItems: "center",
         rowGap: "10px",
-        margin: "15px auto"
+        margin: "15px auto",
+        width: "100%"
     },
 
     title: {
@@ -59,31 +60,16 @@ const useStyles = makeStyles({
         // alignItems: "center",
         margin: "10px auto",
         width: "80%",
+        // backgroundColor: "#b0c4de"
         // height: "60%"
     },
 
     paper2: {
 
         // backgroundColor: "red",
-        
-        
+
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
