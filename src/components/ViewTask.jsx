@@ -3,23 +3,24 @@ import {Divider, List, ListItem, ListItemText, Tooltip} from "@mui/material";
 import DeleteIcon from '@mui/icons-material/Delete';
 import useStyles from './styles';
 
-const Viewtask = ({data}) => {
+import Addtask from './AddTask';
 
+const Viewtask = () => {
 
     const styles = useStyles()
 
     const [info, setInfo] = useState([]);
 
-
     return (
         <div className={styles.container2}>
-            {info.map((e, i)=>(
-                <List aria-label="mailbox folders">
+            <Addtask setData={setInfo}/>
+            {info?.map((text, i)=>(
+                <List aria-label="mailbox folders"  key={i} className={styles.task}>
                     <Divider/>
                     <ListItem >
-                        <ListItemText primary={e} />
+                        <ListItemText primary={text} />
                         <Tooltip title="Delete">
-                            <DeleteIcon style={{color: "green"}}/>
+                            <DeleteIcon style={{color: "blue"}}/>
                         </Tooltip>
                     </ListItem>
                 </List>

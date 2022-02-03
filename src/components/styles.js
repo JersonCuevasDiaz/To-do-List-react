@@ -1,4 +1,5 @@
 import { makeStyles } from "@mui/styles";
+import { fontWeight } from "@mui/system";
 // import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 
@@ -68,8 +69,13 @@ const useStyles = makeStyles({
 
         // backgroundColor: "red",
 
+    },
 
-    }
+    task: {
+        color: "gray",
+        fontWeight: "1rem",
+        
+    },
 
 
 

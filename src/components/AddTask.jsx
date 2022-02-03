@@ -1,21 +1,24 @@
 import React, {useState} from 'react';
-import { OutlinedInput} from "@mui/material";
+import { OutlinedInput, Button} from "@mui/material";
 import AddCircleIcon from '@mui/icons-material/AddCircle';
-import Viewtask from './ViewTask';
+import useStyles from './styles';
 
 
+const Addtask = ({setData}) => {
 
-const Addtask = ({styles}) => {
+    const styles = useStyles();
 
     const [task, setTask] = useState([]);
 
     const handlerSubmit = (e) =>{
         e.preventDefault()
-        setTask([e.target[0].value])
+        if(task.length > 0){
+            setData((elem)=>[task, ...elem])
+        }
     }
 
     const handlerSendInput = (e)=>{
-        // console.log(e.target.value)
+        setTask(e.target.value)
     }
 
     return (
@@ -24,10 +27,9 @@ const Addtask = ({styles}) => {
                 <h1 className={styles.title}>To-do List</h1>
                 <form onSubmit={handlerSubmit}>
                     <OutlinedInput placeholder="Add task" onChange={handlerSendInput} />
-                    <button style={{border: "none", color: 'green'}}><AddCircleIcon  onSubmit={handlerSubmit}/></button>
+                    <AddCircleIcon onClick={handlerSubmit}/>
                 </form>
             </div>
-            {/* <Viewtask data={task}/> */}
         </div>
     );
 }
