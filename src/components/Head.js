@@ -8,7 +8,7 @@ const Head = () => {
     const styles = useStyles();
 
     return (
-        <Paper className={styles.componentPaper} elevation={10}>
+        <Paper className={styles.componentPaper} elevation={20}>
             <Viewtask styles={styles}/>
         </Paper>
 

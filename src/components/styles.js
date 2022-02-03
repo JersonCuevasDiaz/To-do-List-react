@@ -1,14 +1,9 @@
 import { makeStyles } from "@mui/styles";
-import { fontWeight } from "@mui/system";
-// import { createTheme, ThemeProvider } from "@mui/material/styles";
-
-
 
 const useStyles = makeStyles({
-
     componentPaper: {
 
-        borderRadius: "2rem",
+        borderRadius: "4rem",
         border: "1px solid black",
         margin:  '90px auto',
         width:  '40%',
@@ -72,9 +67,9 @@ const useStyles = makeStyles({
     },
 
     task: {
-        color: "gray",
-        fontWeight: "1rem",
-        
+        color: "black",
+        fontFamily: "bold"
+
     },
 
 
