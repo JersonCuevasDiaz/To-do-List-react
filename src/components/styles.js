@@ -72,6 +72,35 @@ const useStyles = makeStyles({
 
     },
 
+    btn_delete: {
+        display: "flex",
+        justifyContent: "center",
+        width:"50%",
+        backgroundColor: "gray"
+    },
+
+    // COMPO COUNTER
+
+    count: {
+        display: 'flex',
+        alignItems: "center",
+        fontFamily: 'sans-serif',
+        flexDirection: "column",
+    },
+
+    quantity: {
+        backgroundColor: "green",
+        borderRadius: "50%",
+        width: "20px",
+        height: "20px",
+        color: "#000",
+        display: "flex",
+        justifyContent: "center",
+        border:" 2px solid #666"
+    }
+
+
+
 
 
 });
