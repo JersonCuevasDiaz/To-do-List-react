@@ -1,16 +1,21 @@
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
-    componentPaper: {
 
-        borderRadius: "4rem",
+    container_general: {
+        width: "80%",
+        border: "1px solid #d3d3d3",
+        height: "100%",
+    },
+
+    componentPaper: {
         border: "1px solid black",
-        margin:  '90px auto',
-        width:  '40%',
+        margin:  '90px 10%',
+        width:  '30%',
+
     },
 
     container: {
-
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -20,8 +25,15 @@ const useStyles = makeStyles({
     },
 
     title: {
-
         marginTop: "50px",
+        fontFamily: "Public Sans, sans-serif",
+        fontWeight: "bold"
+
+    },
+
+    content: {
+        fontWeight: "900",
+        fontFamily: "Public Sans, sans-serif",
 
     },
 
@@ -44,8 +56,6 @@ const useStyles = makeStyles({
 
     },
 
-
-
     // COMPONENT VIEWTASK
 
     container2: {
@@ -53,22 +63,13 @@ const useStyles = makeStyles({
 
         display: "flex",
         flexDirection: "column",
-        // alignItems: "center",
         margin: "10px auto",
-        width: "80%",
-        // backgroundColor: "#b0c4de"
-        // height: "60%"
-    },
-
-    paper2: {
-
-        // backgroundColor: "red",
-
+        width: "90%",
     },
 
     task: {
-        color: "black",
-        fontFamily: "bold"
+
+        fontWeight:"bolder"
 
     },
 
