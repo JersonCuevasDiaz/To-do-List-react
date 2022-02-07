@@ -10,7 +10,7 @@ const Head = () => {
 
     return (
         <Paper className={styles.container_general} elevation={20}>
-            <Paper className={styles.componentPaper} elevation={10}>
+            <Paper className={styles.componentPaper} elevation={20}>
                 {/* <Viewtask styles={styles}/> */}
 
                < Addtask/>

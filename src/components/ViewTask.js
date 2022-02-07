@@ -10,22 +10,28 @@ import useStyles from './styles';
 
 const Viewtask = ({data}) => {
 
+    let num = 0
+    
+
     const styles = useStyles();
 
     const [info, setInfo] = useState(data.tareas);
 
-    console.log(info)
+    const [dele, setDelete] = useState(false);
 
-    // const [dele, setDelete] = useState(false);
-
-    const handlerDelete = ()=>{
+    const handlerDelete = () =>{
+        let f = num++
         // setDelete(!dele)
         // if(!dele){
         //     setInfo([])
         //     setDelete(false)
         // }
+        
+        info.forEach(element => {
+            // console.log(f)
+            
+        })
     }
-
     return (
         <div className={styles.container2}>
             {
@@ -57,6 +63,7 @@ const Viewtask = ({data}) => {
             }
         </div>
     );
+    
 }
 
 export default Viewtask;

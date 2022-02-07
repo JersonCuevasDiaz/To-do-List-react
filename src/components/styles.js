@@ -3,16 +3,19 @@ import { makeStyles } from "@mui/styles";
 const useStyles = makeStyles({
 
     container_general: {
-        width: "80%",
-        border: "1px solid #d3d3d3",
+        // width: "70%",
+        border: "3px solid #d3d3d3",
         height: "100%",
+        display: "flex",
+        justifyContent: "center",
+        alignContent: "center",
+        margin: "40px 90px"
     },
 
     componentPaper: {
-        border: "1px solid black",
+        border: "3px solid #d3d3d3",
         margin:  '90px 10%',
-        width:  '30%',
-
+        width:  '35%',
     },
 
     container: {
@@ -21,7 +24,7 @@ const useStyles = makeStyles({
         alignItems: "center",
         rowGap: "10px",
         margin: "15px auto",
-        width: "100%"
+        width: "90%"
     },
 
     title: {
@@ -58,13 +61,11 @@ const useStyles = makeStyles({
 
     // COMPONENT VIEWTASK
 
-    container2: {
-
-
+    container2:{
         display: "flex",
         flexDirection: "column",
         margin: "10px auto",
-        width: "90%",
+        width: "100%",
     },
 
     task: {
