@@ -3,7 +3,6 @@ import { makeStyles } from "@mui/styles";
 const useStyles = makeStyles({
 
     container_general: {
-        // width: "70%",
         border: "3px solid #d3d3d3",
         height: "100%",
         display: "flex",
@@ -15,7 +14,7 @@ const useStyles = makeStyles({
     componentPaper: {
         border: "3px solid #d3d3d3",
         margin:  '90px 10%',
-        width:  '35%',
+        width:  '50%',
     },
 
     container: {
@@ -60,7 +59,6 @@ const useStyles = makeStyles({
     },
 
     // COMPONENT VIEWTASK
-
     container2:{
         display: "flex",
         flexDirection: "column",
@@ -82,7 +80,6 @@ const useStyles = makeStyles({
     },
 
     // COMPO COUNTER
-
     count: {
         display: 'flex',
         alignItems: "center",
@@ -100,14 +97,6 @@ const useStyles = makeStyles({
         justifyContent: "center",
         border:" 2px solid #666"
     }
-
-
-
-
-
 });
-
-
-
 
 export default useStyles;

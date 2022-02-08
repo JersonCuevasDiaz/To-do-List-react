@@ -3,8 +3,7 @@ import { Typography } from '@mui/material';
 
 const CardMessage = () => {
     return (
-
-        <Typography variant="h6" style={{width: "100%", marginTop: "50px",fontFamily: "Public Sans, sans-serif", fontWeight: "bold"}}>
+        <Typography variant="h6" style={{ fontFamily: "Public Sans, sans-serif", fontWeight: "bold", backgroundColor: "#c0c0c0"}}>
             No homework
         </Typography>
 

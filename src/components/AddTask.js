@@ -4,48 +4,49 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 import useStyles from './styles';
 import Viewtask from './ViewTask';
 
-
-
-
 const Addtask = () => {
 
     const styles = useStyles();
+    // States
+    const [value, setValue] = useState([]);
+    const [task, setTask] = useState({ tareas: [] });
 
-    const [task, setTask] = useState([]);
-    const [content, setContent] = useState({tareas:[]})
-
-
-    const convertToUpperCase = (task)=> {
-        if(task.length > 0){
-            return [task.charAt(0).toUpperCase() + task.slice(1)]
-        }
-    }
-
-    const handlerSubmit = (e) =>{
-        e.preventDefault()
-        if(task.length > 0){
-            content.tareas.unshift(convertToUpperCase(task))
-            setTask('')
-        }
-    }
-
-    const handlerSendInput = (e)=>{
-        setTask(e.target.value)
-    }
+    // Convert first letter to uppercase
+    const convertToUpperCase = (task) => {
+      if (task.length > 0) {
+        return [task.charAt(0).toUpperCase() + task.slice(1)];
+      }
+    };
+    // Submit content of form
+    const handlerSubmit = (e) => {
+      e.preventDefault();
+      if (value.length > 0) {
+        task.tareas.unshift(convertToUpperCase(value));
+        setValue("");
+      }
+    };
+    // Send input onchange function
+    const handleSendInput = (e) => {
+      setValue(e.target.value);
+    };
 
     return (
-        <div>
-            <div className={styles.container}>
-                <h1 className={styles.title}>Todo List</h1>
-                <form onSubmit={handlerSubmit}>
-                    <OutlinedInput placeholder="Add task" onChange={handlerSendInput} value={task}/>
-                    <Button variant="outline" onClick={handlerSubmit}>
-                        <AddCircleIcon />
-                    </Button>
-                </form>
-                <Viewtask data={content}/>
-            </div>
+      <div>
+        <div className={styles.container}>
+          <h1 className={styles.title}>Todo List</h1>
+          <form onSubmit={handlerSubmit}>
+            <OutlinedInput
+              placeholder="Add task"
+              onChange={handleSendInput}
+              value={value}
+            />
+            <Button variant="outline" onClick={handlerSubmit}>
+              <AddCircleIcon />
+            </Button>
+          </form>
+          <Viewtask data={task} setTask={setTask} />
         </div>
+      </div>
     );
 }
 
