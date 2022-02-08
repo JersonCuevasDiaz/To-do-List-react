@@ -4,14 +4,12 @@ import DeleteForeverOutlinedIcon from '@mui/icons-material/DeleteForeverOutlined
 import Checkbox from '@mui/material/Checkbox';
 import Counttask from './CountTask';
 import CardMessage from './CardMessage';
+import Viewcontent from './ViewContent';
 // import Addtask from './AddTask';
 
 import useStyles from './styles';
 
 const Viewtask = ({data}) => {
-
-    let num = 0
-    
 
     const styles = useStyles();
 
@@ -19,18 +17,17 @@ const Viewtask = ({data}) => {
 
     const [dele, setDelete] = useState(false);
 
-    const handlerDelete = () =>{
-        let f = num++
+    const handlerDelete = (i) =>{
+
         // setDelete(!dele)
         // if(!dele){
         //     setInfo([])
         //     setDelete(false)
         // }
-        
-        info.forEach(element => {
-            // console.log(f)
-            
-        })
+        const a = info.filter(item => item.i === info)
+        // console.log(a)
+
+
     }
     return (
         <div className={styles.container2}>
@@ -41,18 +38,19 @@ const Viewtask = ({data}) => {
                             <Counttask total_task={info.length} classes={styles}/>
                             {
                                 info?.map((text, i)=>(
-                                    <List aria-label="mailbox folders" key={i} className={styles.task}>
-                                        <Divider/>
-                                        <ListItem >
-                                            <ListItemText primary={`✔-${text}`} />
-                                            <Checkbox/>
-                                            <Tooltip title="Delete" >
-                                                <Button onClick={handlerDelete} >
-                                                    <DeleteForeverOutlinedIcon style={{color: "#db5555"}}/>
-                                                </Button>
-                                            </Tooltip>
-                                        </ListItem>
-                                    </List>
+                                    <Viewcontent content={text} index={i}/>
+                                    // <List aria-label="mailbox folders" key={i} className={styles.task}>
+                                    //     <Divider/>
+                                    //     <ListItem >
+                                    //         <ListItemText primary={`✔-${text}`} />
+                                    //         <Checkbox/>
+                                    //         <Tooltip title="Delete" >
+                                    //             <Button onClick={handlerDelete(text.id)} >
+                                    //                 <DeleteForeverOutlinedIcon style={{color: "#db5555"}}/>
+                                    //             </Button>
+                                    //         </Tooltip>
+                                    //     </ListItem>
+                                    // </List>
                                 ))
                             }
                         </Paper>
@@ -63,7 +61,7 @@ const Viewtask = ({data}) => {
             }
         </div>
     );
-    
+
 }
 
 export default Viewtask;

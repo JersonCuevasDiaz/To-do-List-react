@@ -24,7 +24,7 @@ const Addtask = () => {
     const handlerSubmit = (e) =>{
         e.preventDefault()
         if(task.length > 0){
-            content.tareas.push(convertToUpperCase(task))
+            content.tareas.unshift(convertToUpperCase(task))
             setTask('')
         }
     }
